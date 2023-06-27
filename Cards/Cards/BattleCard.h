@@ -2,6 +2,10 @@
 #define BATTLECARD_H
 
 #include "Card.h"
+#include <string>
+
+const std::string STRING_DEFAULT = "";
+const int INT_DEFAULT = 0;
 
 class BattleCard: public Card
 {
