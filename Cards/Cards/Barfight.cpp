@@ -3,7 +3,7 @@
 Barfight::Barfight()
 {
     m_name = "Barfight";
-    m_healthPointsLoss = 10;
+    m_healthPointsLoss = HEALTH_POINTS_ON_LOSS;
 }
 
 void Barfight::applyEncounter(Player& player) const
@@ -22,7 +22,3 @@ void Barfight::applyEncounter(Player& player) const
 Card* Barfight::clone() const {
     return new Barfight(*this);
 }
-// std::ostream& operator<<(std::ostream& os, const Barfight& barFight) 
-// {
-//     barFight.printRegularCard(os);
-// }
