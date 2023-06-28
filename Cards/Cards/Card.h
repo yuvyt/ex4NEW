@@ -40,6 +40,7 @@ public:
 
     /*
      * prints card detaiels using a function from utilities.h
+     @param: os: ostream to print to
     */
     virtual void printCard(std::ostream& os) const;
 
