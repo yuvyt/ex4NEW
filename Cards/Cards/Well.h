@@ -17,7 +17,8 @@ public:
     Well();
     /*overloads the applyEncounter function in Card and
     implements a new version for it specifically when encountering 
-    well card*/
+    well card
+    @param: player: player to apply the encounter on*/
     void applyEncounter(Player& player) const override;
     /*cloning a well card*/
     Card* clone() const override;
