@@ -8,15 +8,16 @@
 
 class Warrior : public Player
 {
-public:
+    public:
 
-    /*c'tor for warrior
-    @param:playerName: the name of the player */
-    Warrior(const std::string& playerName);
-    /*getAttackStrength returns players current strength
-    * calculated by the sum of his kevek and his force */
-    int getAttackStrength() const override;
-    Player* clone() const override;
+        /*c'tor for warrior
+        @param:playerName: the name of the player */
+        Warrior(const std::string& playerName);
+        /*getAttackStrength returns players current strength
+        * calculated by the sum of his kevek and his force */
+        int getAttackStrength() const;
+         /*setting the d'tpr to default*/
+        ~Warrior() = default;
 
 };
 
