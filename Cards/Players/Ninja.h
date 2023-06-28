@@ -17,7 +17,10 @@ public:
     /* removes healing points according to the input */
     void damage(int HPToTake);
 
+    /*cloning the player*/
     Player *clone() const override;
+    /*setting the d'tpr to default*/
+    ~Ninja() = default;
 
 };
 
