@@ -19,11 +19,14 @@ public:
     Witch();
     /*overloads the applyEncounter function in Card and
     implements a new version for it specifically when encountering 
-    Witch card*/
+    Witch card
+    @param: player: player to apply the encounter on*/
     void applyEncounter(Player& player) const override;
     /*overloads the printCard function in Card and
     implements a new version for it specifically when printing 
-    Witch card*/
+    Witch card
+    
+    @param: os: ostream to print to*/
     void printCard(std::ostream& os) const override;
     /*cloning a Witch card*/
     BattleCard* clone() const override;
