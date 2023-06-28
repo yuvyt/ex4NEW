@@ -18,7 +18,8 @@ public:
     Barfight();
     /*overloads the applyEncounter function in Card and
     implements a new version for it specifically when encountering 
-    barfight card*/
+    barfight card
+    @param: player: player to apply the encounter on*/
     void applyEncounter(Player& player) const override;
     /*cloning a barfight card*/
     Card *clone() const override;
