@@ -7,7 +7,6 @@ using std::endl;
 
 
 
-// should this stay?
 
 void Card::printCard(std::ostream& os) const
 {
