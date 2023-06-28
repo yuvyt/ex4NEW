@@ -3,7 +3,7 @@
 
 #include "BattleCard.h"
 
-const int HEALTH_POINTS_ON_LOSS = 10; //Dragon burns the loser and takes all it's health points
+const int HEALTH_POINTS_ON_LOSS = 10;
 const int CARD_FORCE = 5;
 const int LOOT = 2;
 
