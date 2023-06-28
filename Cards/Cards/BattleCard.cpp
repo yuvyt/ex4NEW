@@ -2,10 +2,10 @@
 
 BattleCard::BattleCard()
 {
-    m_name ="";
-    m_cardForce = 0;
-    m_loot= 0;
-    m_damage= 0;
+    m_name =STRING_DEFAULT;
+    m_cardForce = INT_DEFAULT;
+    m_loot= INT_DEFAULT;
+    m_damage= INT_DEFAULT;
 }
 
 
