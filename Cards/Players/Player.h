@@ -39,7 +39,7 @@ public:
     // Player () = default;
 
     /*defaulted destructor*/
-    virtual ~Player() = default; // check if ok
+    virtual ~Player() = default; 
 
     /*printInfo prints all the uniqe information the player posses */
     void printInfo() const;
@@ -124,7 +124,7 @@ protected:
 
 };
 
-
+/*overloads << operator and prints Players deatails.*/
 std::ostream &operator<<(std::ostream &os, const Player &player);
 
 
