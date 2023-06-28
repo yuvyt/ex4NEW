@@ -25,14 +25,18 @@ public:
     BattleCard();
     /* overrides the function from Card and expects those inheriting
      from it to implement it
+     @param: player: player to apply the encounter on
     */
     virtual void applyEncounter(Player& player) const =0;
     /*
     * prints monster card detaiels using a function from utilities.h
+    @param: os: std::ostream to print to
+    @param: isDragon: is the card a dragon
     */
     void printMonsterCard(std::ostream& os, bool isDragon) const;
 
     /*prints card deatails usinf  functoion from utilities
+    @param: os: std::ostream to print to
     */
     virtual void printCard(std::ostream& os) const =0;
     /*
