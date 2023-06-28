@@ -5,7 +5,7 @@
 
 #include "Card.h"
 #include "../utilities.h"
-const HEALTH_POINTS_ON_LOSS = 10;
+const int HEALTH_POINTS_ON_LOSS = 10;
 
 class Barfight : public Card
 {
