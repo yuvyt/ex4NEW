@@ -24,11 +24,14 @@ public:
     Merchant();
     /*overloads the applyEncounter function in Card and
     implements a new version for it specifically when encountering 
-    MERCHENT card*/
+    MERCHENT card
+    @param: player: player to apply the encounter on*/
     void applyEncounter(Player& player) const override;
-    /*function to implement the process of buing a health point*/
+    /*function to implement the process of buing a health point
+    @param: player: player to apply the encounter on*/
     void applyMerchantHealthEncounter(Player& player) const;
-    /*function to implement the process of buing a force point*/
+    /*function to implement the process of buing a force point
+    @param: player: player to apply the encounter on*/
     void applyMerchantForceEncounter(Player& player) const;
     /*cloning a Merchant card*/
     Card* clone() const override;
