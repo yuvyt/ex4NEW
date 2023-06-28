@@ -16,7 +16,8 @@ public:
     Treasure();
     /*overloads the applyEncounter function in Card and
     implements a new version for it specifically when encountering 
-    Treasure card*/
+    Treasure car
+    @param: player: player to apply the encounter ond*/
     void applyEncounter(Player& player) const override;
     /*cloning a Treasure card*/
     Card* clone() const override;
