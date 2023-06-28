@@ -22,6 +22,7 @@ public:
     void applyEncounter(Player& player) const override;
     /*cloning a barfight card*/
     Card *clone() const override;
+    /*defining the d'tpr as default */
     ~Barfight() = default;
 
 
