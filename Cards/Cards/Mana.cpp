@@ -4,7 +4,7 @@
 Mana::Mana()
 {
     m_name = "Mana";
-    m_healthPoints = 10;
+    m_healthPoints = HEALTH_POINTS_TO_ADD;
 }
 
 void Mana::applyEncounter(Player& player) const
@@ -24,7 +24,3 @@ Card* Mana::clone() const {
     return new Mana(*this);
 }
 
-// std::ostream& operator<<(std::ostream& os, const Mana& mana) 
-// {
-//     mana.printRegularCard(os);
-// }
