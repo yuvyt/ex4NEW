@@ -3,7 +3,7 @@
 Well::Well()
 {
     m_name = "Well";
-    m_healthPointsLoss = 10;
+    m_healthPointsLoss = HEALTH_POINTS_ON_LOSS;
 }
 
 void Well::applyEncounter(Player& player) const
@@ -24,7 +24,3 @@ Card* Well::clone() const {
     return new Well(*this);
 }
 
-// std::ostream& operator<<(std::ostream& os, const Well& well) 
-// {
-//     well.printRegularCard(os);
-// }
