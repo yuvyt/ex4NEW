@@ -15,7 +15,8 @@ public:
     Mana();
     /*overloads the applyEncounter function in Card and
     implements a new version for it specifically when encountering 
-    Mana card*/
+    Mana card
+    @param: player: player to apply the encounter on*/
     void applyEncounter(Player &player) const override;
     /*cloning a mana card*/
     Card *clone() const override;
