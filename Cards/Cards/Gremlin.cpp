@@ -1,12 +1,12 @@
 #include "Gremlin.h"
-// using std::cout;
+
 
 Gremlin::Gremlin()
 {
     m_name = "Gremlin";
-    m_cardForce = 5;
-    m_loot = 2;
-    m_damage = 10;
+    m_cardForce = CARD_FORCE;
+    m_loot = LOOT;
+    m_damage = HEALTH_POINTS_ON_LOSS;
 }
 void Gremlin::applyEncounter(Player& player) const
 {
@@ -30,7 +30,3 @@ void Gremlin::printCard(std::ostream& os) const
 BattleCard* Gremlin::clone() const {
     return new Gremlin(*this);
 }
-// std::ostream& operator<<(std::ostream& os, const Gremlin& gremlin) 
-// {
-//     gremlin.printMonsterCard(os, false);
-// }
