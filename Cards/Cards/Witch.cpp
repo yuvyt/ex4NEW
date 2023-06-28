@@ -4,11 +4,13 @@
 Witch::Witch()
 {
     m_name = "Witch";
-    m_cardForce = 11;
-    m_loot = 2;
-    m_damage = 10;
-    m_powerLoss = 1;
+    m_cardForce = CARD_FORCE;
+    m_loot = LOOT;
+    m_damage = HEALTH_POINTS_ON_LOSS;
+    m_powerLoss = FORCE_POINTS_ON_LOSS;
 }
+
+
 void Witch::applyEncounter(Player& player) const
 {
 
@@ -34,7 +36,3 @@ void Witch::printCard(std::ostream& os) const
 BattleCard* Witch::clone() const {
     return new Witch(*this);
 }
-// std::ostream& operator<<(std::ostream& os, const Witch& witch) 
-// {
-//     witch.printMonsterCard(os, false);
-// }
