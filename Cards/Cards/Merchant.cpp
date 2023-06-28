@@ -7,11 +7,12 @@ using std::cin;
 Merchant::Merchant()
 {
     m_name = "Merchant";
-    m_healthPoints = 1;
-    m_healthPointsPrice = 5;
-    m_forcePoints = 1;
-    m_forcePointsPrice = 10;
+    m_healthPoints = HEALTH_POINTS_TO_GIVE;
+    m_healthPointsPrice = HEALTH_POINTS_PRICE;
+    m_forcePoints = FORCE_POINTS_TO_GIVE;
+    m_forcePointsPrice = FORCE_POINTS_PRICE;
 }
+
 
 void Merchant::applyMerchantHealthEncounter(Player& player) const
 {
@@ -50,23 +51,6 @@ void Merchant::applyEncounter(Player& player) const {
             validInput = 1;
         }
     }
-//
-//    while (purchaseMode != 0 && purchaseMode != 1 && purchaseMode != 2)
-//    {
-//        std::getline(std::cin, choise);
-//        try
-//        {
-//            purchaseMode = std::stoi(choise);
-//
-//        }
-//        catch (...)
-//        {
-//            printInvalidInput();
-//            continue;
-//        }
-//        if(purchaseMode != 0 && purchaseMode != 1 && purchaseMode != 2)
-//            printInvalidInput();
-//    }
         if (purchaseMode == 1) {
             if (player.getCoins() >= m_healthPointsPrice) {
                 applyMerchantHealthEncounter(player);
@@ -87,5 +71,4 @@ void Merchant::applyEncounter(Player& player) const {
             printMerchantSummary(std::cout, player.getName(), 0, 0);
         }
     }
-
 
