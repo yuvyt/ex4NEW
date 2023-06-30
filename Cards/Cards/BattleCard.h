@@ -1,38 +1,48 @@
-#ifndef WITCH_H
-#define WITCH_H
+#ifndef BATTLECARD_H
+#define BATTLECARD_H
 
+#include "Card.h"
+#include <string>
 
+const std::string STRING_DEFAULT = "";
+const int INT_DEFAULT = 0;
 
-#include "BattleCard.h"
-
-const int HEALTH_POINTS_ON_LOSS = 10; 
-const int FORCE_POINTS_ON_LOSS = 1; 
-const int CARD_FORCE = 11;
-const int LOOT = 2;
-
-class Witch: public BattleCard
+class BattleCard: public Card
 {
-private:
-    int m_powerLoss;
-public:
-    /* c'tor for Witch, initializaing to the default const values*/
-    Witch();
-    /*overloads the applyEncounter function in Card and
-    implements a new version for it specifically when encountering 
-    Witch card
-    @param: player: player to apply the encounter on*/
-    void applyEncounter(Player& player) const override;
-    /*overloads the printCard function in Card and
-    implements a new version for it specifically when printing 
-    Witch card
-    
-    @param: os: ostream to print to*/
-    void printCard(std::ostream& os) const override;
-    /*cloning a Witch card*/
-    BattleCard* clone() const override;
-    /*defining the d'tpr as default */
-    ~Witch() = default;
-};
+protected:
+    int m_cardForce;
+    int m_loot;
+    int m_damage;
 
+public:
+	/*
+    * coloning a battle card ,should be overridden 
+    */
+    virtual BattleCard* clone() const=0;
+    /*
+    * defaul constructor for battke Card
+    */
+    BattleCard();
+    /* overrides the function from Card and expects those inheriting
+     from it to implement it
+     @param: player: player to apply the encounter on
+    */
+    virtual void applyEncounter(Player& player) const =0;
+    /*
+    * prints monster card detaiels using a function from utilities.h
+    @param: os: ostream to print to
+    @param: isDragon: is the card a dragon
+    */
+    void printMonsterCard(std::ostream& os, bool isDragon) const;
+
+    /*prints card deatails usinf  functoion from utilities
+    @param: os: ostream to print to
+    */
+    virtual void printCard(std::ostream& os) const =0;
+    /*
+    * setting the d'tor to default 
+    */
+    ~BattleCard() = default;
+};
 
 #endif 
